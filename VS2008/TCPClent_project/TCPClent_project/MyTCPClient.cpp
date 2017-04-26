@@ -11,7 +11,7 @@ void MyTCPClient::work(std::deque<char>& send_deque, std::deque<char>& recv_dequ
 {
     Sleep(200);
     char buf[1024];
-    int len = sprintf(buf, "i am client %d\n", (unsigned int)GetCurrentProcessId());
+    int len = sprintf(buf, "i am client %d\r\n", (unsigned int)GetCurrentProcessId());
     for (int i = 0; i < len; i++)  send_deque.push_back(buf[i]);
 
     std::string str;
